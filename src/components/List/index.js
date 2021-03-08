@@ -1,10 +1,7 @@
+import styles from './index.module.scss'
 
- function List({starships = []}) {
-  return (
-        <ul>
-          {starships.map(starship => <li key={starship.url}>{starship.name}: {starship.distance}</li>)}
-        </ul>
-  );
+ function List({children}) {
+  return <div className={styles.item}>{children}</div>
 }
 
 export default List;
